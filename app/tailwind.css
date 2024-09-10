@@ -1,3 +1,57 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@layer base {
+  :root {
+    --text: #0f0a0a;
+    --background: #faf4f4;
+    --primary: #dc3838;
+    --secondary: #ec8989;
+    --accent: #d90d0d;
+    --backdrop-transparent: #00000016;
+  }
+  * {
+    transition: 0.2s ease-in-out;
+    font-family: hind vadodara, Arial, Helvetica, sans-serif;
+  }
+  .dark {
+    --text: #f4efef;
+    --background: #0b0505;
+    --primary: #c92323;
+    --secondary: #751313;
+    --accent: #f32828;
+    --backdrop-transparent: #ffffff0d;
+  }
+}
+
+/* boiler plate */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  border: none;
+}
+html {
+  box-sizing: border-box;
+}
+
+menu:not(article menu),
+ol:not(article ol),
+ul:not(article ul) {
+  list-style: none;
+}
+menu,
+ol,
+ul {
+  padding-left: 0;
+}
+article ol,
+article ul {
+  list-style-position: inside;
+}
+/* boiler plate */
+h1 {
+  font-size: 1.5rem;
+}
