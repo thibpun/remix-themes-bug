@@ -14,14 +14,15 @@
     transition: 0.2s ease-in-out;
     font-family: hind vadodara, Arial, Helvetica, sans-serif;
   }
-  .dark {
-    --text: #f4efef;
-    --background: #0b0505;
-    --primary: #c92323;
-    --secondary: #751313;
-    --accent: #f32828;
-    --backdrop-transparent: #ffffff0d;
-  }
+}
+
+.dark {
+  --text: #f4efef;
+  --background: #0b0505;
+  --primary: #c92323;
+  --secondary: #751313;
+  --accent: #f32828;
+  --backdrop-transparent: #ffffff0d;
 }
 
 /* boiler plate */

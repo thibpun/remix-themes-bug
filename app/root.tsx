@@ -15,7 +15,6 @@ import {
   PreventFlashOnWrongTheme,
 } from "remix-themes/build/theme-provider";
 import { themeSessionResolver } from "utils/theme.server";
-import { useEffect } from "react";
 
 export async function loader({ request }: LoaderFunctionArgs) {
   const { getTheme } = await themeSessionResolver(request);
@@ -27,10 +26,7 @@ export async function loader({ request }: LoaderFunctionArgs) {
 
 function Layout({ children }: { children: React.ReactNode }) {
   const loaderData = useLoaderData<typeof loader>();
-  const [theme, setTheme] = useTheme();
-  useEffect(() => {
-    if (loaderData.theme) setTheme(loaderData.theme);
-  }, []);
+  const [theme] = useTheme();
 
   return (
     <html lang="en" className={theme ?? ""}>
